@@ -1,0 +1,47 @@
+# Ignore contents of specific folders
+demo_output/*
+!demo_output/.gitkeep
+
+output-15-4-pretrain-init/*
+!output-15-4-pretrain-init/.gitkeep
+
+output-scratch/*
+!output-scratch/.gitkeep
+
+results/*
+!results/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Environment
+.env
+.venv
+env/
+venv/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+logs/
+*.log
+
+# Dataset
+data/
+*.jpg
+*.jpeg
+*.png
+*.xml
+*.json
+*.yaml
+*.yml
+*.pth
+*.pt
