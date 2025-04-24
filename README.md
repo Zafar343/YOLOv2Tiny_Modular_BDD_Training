@@ -2,6 +2,8 @@
 
 This repository contains a modular implementation of YOLOv2-Tiny for object detection, supporting custom dataset training, self-training, and distributed training setups. The code is based on the original YOLOv2 implementation but with enhanced modularity and additional features.
 
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
 ## Table of Contents
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
@@ -13,6 +15,8 @@ This repository contains a modular implementation of YOLOv2-Tiny for object dete
 - [Performance Tuning](#performance-tuning)
 - [Troubleshooting](#troubleshooting)
 - [Upcoming Features](#upcoming-features)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
 
 ## Prerequisites
 
@@ -85,7 +89,7 @@ python train_torch_epoch.py --dataset custom --data path/to/data.yaml
 
 ### Training with Pretrained Weights
 ```bash
-python train_yolov2_tiny.py --dataset custom --data path/to/data.yaml --resume --weights path/to/weights.pt
+python train_torch_epoch.py --dataset custom --data path/to/data.yaml --resume --weights path/to/weights.pt
 ```
 
 ### Training Parameters
@@ -117,7 +121,7 @@ python validate.py --model_name path/to/model.pt --data path/to/data.yaml
 
 For single image inference:
 ```bash
-python demo.py --model_name path/to/model.pt --source path/to/image.jpg
+python demo.py --model_name path/to/model.pt --data path/to/dir or path/to/data text file
 ```
 
 ### Inference Parameters
@@ -174,3 +178,45 @@ For additional support, please open an issue in the repository.
 - Iterative training pipeline
 
 Stay tuned for updates! ⏳
+
+## License
+
+This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+This project is based on the following works:
+
+1. **Original YOLOv2 Paper**:
+   - Title: YOLO9000: Better, Faster, Stronger
+   - Authors: Joseph Redmon, Ali Farhadi
+   - Conference: CVPR 2017
+   - [Paper Link](https://arxiv.org/abs/1612.08242)
+
+   Citation:
+   ```bibtex
+   @article{redmon2016yolo9000,
+     title={YOLO9000: Better, Faster, Stronger},
+     author={Redmon, Joseph and Farhadi, Ali},
+     journal={arXiv preprint arXiv:1612.08242},
+     year={2016}
+   }
+   ```
+
+2. **Original PyTorch Implementation**:
+   - Repository: [yolov2.pytorch](https://github.com/tztztztztz/yolov2.pytorch)
+   - This implementation served as the foundation for our modular version
+   - Special thanks to the original authors for their work
+
+3. **BDD100K Dataset**:
+   - Used for training and evaluation
+   - [Dataset Link](https://www.bdd100k.com/)
+   - Citation:
+   ```bibtex
+   @article{yu2018bdd100k,
+     title={BDD100K: A Diverse Driving Video Database with Scalable Annotation Tooling},
+     author={Yu, Fisher and Chen, Haofeng and Wang, Xin and Xian, Wenqi and Chen, Yingying and Liu, Fangchen and Madhavan, Vashisht and Darrell, Trevor},
+     journal={arXiv preprint arXiv:1805.04687},
+     year={2018}
+   }
+   ```
