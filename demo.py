@@ -147,7 +147,7 @@ def demo(args):
 
     if args.data==None:
         # input images
-        images_dir   = 'Images'
+        images_dir   = 'images'
         images_names = ['image1.jpg', 'image2.jpg']
     else:
         if os.path.isdir(args.data):
