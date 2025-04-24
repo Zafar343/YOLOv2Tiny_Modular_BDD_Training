@@ -1,0 +1,9 @@
+Called with args:
+Namespace(dataset='custom', data='data.yaml', output_dir='eval', model_name='Pretrained/Scratch/yolov2_best_map@211.pth', num_workers=8, batch_size=8, use_cuda=True, vis=False, data_limit=0, thres=0.2, pseudos=False, device=0, savePath='results', imgSize='1280,720', self_training=False, conf_thresh=0.01, nms_thresh=0.4)
+making: eval/preds
+Validating using CUDA
+Performing validation.: 100%|█████████████████████████████████████████████████████████████████████████████████████████| 1238/1238 [02:51<00:00,  7.23it/s]
+AP: 43.32% (0)
+               Class         TP         FP          P          R     mAP@.5
+                 ALL    52310.0    67661.0       43.6      47.95      43.32
+            Vehicles    52310.0    67661.0       43.6      47.95      43.32
