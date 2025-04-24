@@ -1,6 +1,6 @@
 *.json
 *.pth
-*.txt
+# *.txt
 *.jpg
 *.png
 *.jpeg
