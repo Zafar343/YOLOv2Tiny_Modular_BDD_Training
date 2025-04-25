@@ -89,7 +89,7 @@ python train_torch_epoch.py --dataset custom --data path/to/data.yaml
 
 ### Training with Pretrained Weights
 ```bash
-python train_torch_epoch.py --dataset custom --data path/to/data.yaml --resume --weights path/to/weights.pt
+python train_torch_epoch.py --dataset custom --data path/to/data.yaml --resume --weights path/to/weights.pth
 ```
 
 ### Training Parameters
@@ -106,7 +106,7 @@ python train_torch_epoch.py --dataset custom --data path/to/data.yaml --resume -
 
 Run validation with:
 ```bash
-python validate.py --model_name path/to/model.pt --data path/to/data.yaml
+python validate.py --model_name path/to/model.pth --data path/to/data.yaml
 ```
 
 ### Validation Parameters
@@ -121,7 +121,7 @@ python validate.py --model_name path/to/model.pt --data path/to/data.yaml
 
 For single image inference:
 ```bash
-python demo.py --model_name path/to/model.pt --data path/to/dir or path/to/data text file
+python demo.py --model_name path/to/model.pth --data path/to/dir or path/to/data text file
 ```
 
 ### Inference Parameters
