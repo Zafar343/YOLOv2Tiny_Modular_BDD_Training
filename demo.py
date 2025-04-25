@@ -21,19 +21,19 @@ np.random.seed(0)
 def demo_args():
     parser = argparse.ArgumentParser('Yolo v2')
     parser.add_argument('--output_dir', dest='output_dir',
-                        default='demo_output', type=str,
+                        default='Prediction', type=str,
                         help='Specify an output directory')
     parser.add_argument('--model_name', dest='model_name',
-                        default='yolov2_best_map.pth', type=str,
+                        default='output/yolov2_best_map@38.pth', type=str,
                         help='Specify the model path (.pth model)')
     parser.add_argument('--use_cuda', dest='use_cuda',
                         default=True, type=bool,
                         help='specify whether to use cuda or not')
     parser.add_argument('--data', type=str,
-                        default=None,
+                        default="Test_Images/test_images.txt",
                         help='Path to data dir or data.txt file')
     parser.add_argument('--classes', nargs="*",
-                        default=["vehicles"],
+                        default=["Vehicles"],
                         help='provide the list of class names if other than voc') # Example 'default = ['Vehicle'] for a single class
     parser.add_argument('--conf_thresh', type=float,
                         default=0.1,
@@ -50,8 +50,8 @@ def demo_args():
     parser.add_argument('--save-txt', type=bool,
                         default=False,
                         help='save predictions to a file')
-    parser.add_argument('--save-annotated-img', type=bool,
-                        default=False,
+    parser.add_argument('--save_annotated_img', type=bool,
+                        default=True,
                         help='save predictions to a file')
     parser.add_argument('--vis', type=bool,
                         default=False,
@@ -161,10 +161,10 @@ def demo(args):
     
     if args.classes is None:
         classes = ('aeroplane', 'bicycle', 'bird', 'boat',
-                                'bottle', 'bus', 'car', 'cat', 'chair',
-                                'cow', 'diningtable', 'dog', 'horse',
-                                'motorbike', 'person', 'pottedplant',
-                                'sheep', 'sofa', 'train', 'tvmonitor')
+                    'bottle', 'bus', 'car', 'cat', 'chair',
+                    'cow', 'diningtable', 'dog', 'horse',
+                    'motorbike', 'person', 'pottedplant',
+                    'sheep', 'sofa', 'train', 'tvmonitor')
     else:
         classes = args.classes
 
@@ -241,8 +241,8 @@ def demo(args):
                     _detAllclass = []
                     for _pred in pred:
                         _detAllclass.append(f"{int(_pred[-1])} {_pred[0]:.4f} {_pred[1]:.4f} {_pred[2]:.4f} {_pred[3]:.4f} {_pred[4]:.4f}\n")
-                with open(pred_path, 'w') as f:
-                    f.writelines(_detAllclass)
+                # with open(pred_path, 'w') as f:
+                #     f.writelines(_detAllclass)
 
                 if args.save_annotated_img: 
                     img = showImg(img, pred, cls=classes)
