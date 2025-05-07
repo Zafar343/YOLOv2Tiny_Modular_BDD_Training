@@ -46,7 +46,7 @@ def parse_args():
     parser = argparse.ArgumentParser(description='Yolo v2')
     parser.add_argument('--max_epochs', dest='max_epochs',
                         help='number of epochs to train',
-                        default=250, type=int)
+                        default=500, type=int)
     parser.add_argument('--start_epoch', dest='start_epoch',
                         default=1, type=int,
                         help="specy the starting epoch")
@@ -262,7 +262,7 @@ def train():
 	logger.debug('Model initialized')
 	
 	if args.resume:
-		checkpoint = torch.load(args.weights, weights_only=True)
+		checkpoint = torch.load(args.weights, weights_only=False)
 		logger.debug('Loaded pretrained checkpoint')
 		pytorch_model = checkpoint['model']
 

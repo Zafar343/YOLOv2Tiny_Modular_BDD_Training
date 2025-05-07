@@ -46,7 +46,7 @@ def parse_args():
     parser.add_argument('--output_dir', dest='output_dir',
                         default='eval', type=str)
     parser.add_argument('--model_name', dest='model_name',
-                        default='Pretrained/Scratch/yolov2_best_map@211.pth',
+                        default='output_scratch/yolov2_best_map@347.pth',
                         type=str)
     parser.add_argument('--nw', dest='num_workers',
                         help='number of workers to load training data',

@@ -24,7 +24,7 @@ def demo_args():
                         default='Prediction', type=str,
                         help='Specify an output directory')
     parser.add_argument('--model_name', dest='model_name',
-                        default='output/yolov2_best_map@38.pth', type=str,
+                        default='output_pretrained/yolov2_best_map@158.pth', type=str,
                         help='Specify the model path (.pth model)')
     parser.add_argument('--use_cuda', dest='use_cuda',
                         default=True, type=bool,
@@ -257,4 +257,3 @@ def demo(args):
 if __name__ == '__main__':
     args = demo_args()
     demo(args)
-
