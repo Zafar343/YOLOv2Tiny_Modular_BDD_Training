@@ -1,0 +1,8 @@
+eval/preds exists removing...
+making: eval/preds
+Validating using CUDA
+Performing validation.: 100%|█████████████████████████████████████████████████████████████| 1238/1238 [02:39<00:00,  7.78it/s]
+AP: 46.28% (0)
+               Class         TP         FP          P          R     mAP@.5
+                 ALL    55544.0    67510.0      45.14      50.92      46.28
+            Vehicles    55544.0    67510.0      45.14      50.92      46.28
